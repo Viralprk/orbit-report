@@ -15,7 +15,7 @@ export class OrbitCountsComponent implements OnInit {
   findSatelite(type: string) {
     let count = 0;
     for (let i = 0; i < this.satellites.length; i++) {
-      if (type.toLocaleLowerCase() === this.satellites[i].type.toLowerCase())
+      if (type.toLowerCase() === this.satellites[i].type.toLowerCase())
         count = count + 1;
     }
     return count;
