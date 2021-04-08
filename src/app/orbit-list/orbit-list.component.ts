@@ -9,9 +9,6 @@ import { Satellite } from "../satellite";
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
 
-  alternateColor: string = "#61C08D";
-  count = 0;
-
   constructor() {}
 
   ngOnInit() {}

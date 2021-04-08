@@ -66,16 +66,15 @@ export class AppComponent {
           matchingSatellites.push(this.sourceList[i]);
         }
       }
-
       for (let i = 0; i < this.sourceList.length; i++) {
-        let otype = this.sourceList[i].orbitType.toLowerCase();
-        if (otype.indexOf(searchTerm) >= 0) {
+        let typ = this.sourceList[i].type.toLowerCase();
+        if (typ.indexOf(searchTerm) >= 0) {
           matchingSatellites.push(this.sourceList[i]);
         }
       }
       for (let i = 0; i < this.sourceList.length; i++) {
-        let typ = this.sourceList[i].type.toLowerCase();
-        if (typ.indexOf(searchTerm) >= 0) {
+        let otype = this.sourceList[i].orbitType.toLowerCase();
+        if (otype.indexOf(searchTerm) >= 0) {
           matchingSatellites.push(this.sourceList[i]);
         }
       }

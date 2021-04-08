@@ -9,7 +9,7 @@
   </tr>
   <!-- TODO: put <tr *ngFor=""></tr> here -->
 
-  <tr *ngFor="let item of satellites">
+  <tr class="row" *ngFor="let item of satellites">
     <td>{{ item.name }}</td>
     <td [class.warning]="item.shouldShowWarning()">{{ item.type }}</td>
     <td>{{ item.operational }}</td>
