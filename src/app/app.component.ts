@@ -55,35 +55,17 @@ export class AppComponent {
   //     new Satellite("ISS", "Space Station", "1998-11-20", "LOW", true),
   //   ];
   // }
-
   search(searchTerm: string): void {
-    if (searchTerm !== null && searchTerm.trim().length > 0) {
-      let matchingSatellites: Satellite[] = [];
-      searchTerm = searchTerm.toLowerCase();
-      for (let i = 0; i < this.sourceList.length; i++) {
-        let name = this.sourceList[i].name.toLowerCase();
-        if (name.indexOf(searchTerm) >= 0) {
-          matchingSatellites.push(this.sourceList[i]);
-        }
+    let matchingSatellites: Satellite[] = [];
+    searchTerm = searchTerm.toLowerCase();
+    for (let i = 0; i < this.sourceList.length; i++) {
+      let name = this.sourceList[i].name.toLowerCase();
+      if (name.indexOf(searchTerm) >= 0) {
+        matchingSatellites.push(this.sourceList[i]);
       }
-      for (let i = 0; i < this.sourceList.length; i++) {
-        let typ = this.sourceList[i].type.toLowerCase();
-        if (typ.indexOf(searchTerm) >= 0) {
-          matchingSatellites.push(this.sourceList[i]);
-        }
-      }
-      for (let i = 0; i < this.sourceList.length; i++) {
-        let otype = this.sourceList[i].orbitType.toLowerCase();
-        if (otype.indexOf(searchTerm) >= 0) {
-          matchingSatellites.push(this.sourceList[i]);
-        }
-      }
-
-      // assign this.displayList to be the array of matching satellites
-      // this will cause Angular to re-make the table, but now only containing matches
-      this.displayList = matchingSatellites;
-    } else {
-      this.displayList = this.sourceList.slice(0);
     }
+    // assign this.displayList to be the array of matching satellites
+    // this will cause Angular to re-make the table, but now only containing matches
+    this.displayList = matchingSatellites;
   }
 }
